@@ -1,18 +1,23 @@
-# Mon CV
+# My resume
 
-La typos de'icônes doit être généré avec [icon-font-generator](https://github.com/Workshape/icon-font-generator)
+My resume, written in `.pug` and `.scss`
+
+## Icons font
+The icons in the resume are inserted via an icons font. I use [icon-font-generator](https://github.com/Workshape/icon-font-generator) to generate it.
 
 ``` bash
-# Installation de la dépendance
+# Installation of dependency
 npm install -g icon-font-generator
+# Font icon generation
 icon-font-generator my-icons/*.svg -o dist
 ```
 
-Le CV est généré avec [RelaxedJS](https://github.com/RelaxedJS/ReLaXed)
+## PDF generation
+The resume is generated from `.pug` and `.scss` to `.pdf` with [RelaxedJS](https://github.com/RelaxedJS/ReLaXed)
 
 ``` bash
-# Installation de la dépendance
+# Installation of dependency
 npm i -g relaxedjs
-# Génération du pdf
+# PDF generation
 relaxed resume.pug --build-once
 ```
