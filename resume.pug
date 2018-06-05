@@ -1,0 +1,94 @@
+include resume-mixins.pug
+
+#header
+  h1.header-title Valentin Chevalier
+  h2.header-subtitle Développeur Frontend
+#main
+
+  .section
+    h2.section-title Expériences
+
+    +item("Développeur Frontend", "Munso", "Toulouse", "Sept. 2016", "Auj.")
+      :markdown-it
+        - Développement d’applications **Ionic/Angular** (Android et iOS)
+        - Développement de sites web Angular : [Share Stories Of Change](http://sharestoriesofchange.org/)
+        - Sites web **WordPress** : [Beezness](https://beezness.net/) - [CDA France](https://cdafrance.com/)
+        - Intégration front sur du Symfony (**Twig**) : [Lig'Up](https://lig-up.net/)
+        - Mise en place d’API REST Node/Express/MongoDB
+        - Mise en place d'environnement de developpement (**WebPack**)
+
+    +item("Développeur Frontend", "Demooz", "Toulouse", "Mai", "Août 2016", "Stage M1 Informatique")
+      :markdown-it
+        - Développement de la version 2 du site [demooz.com](https://demooz.com/fr/)
+        - Frontend et backend AngularJS + API NodeJS
+
+    +item("Développeur Frontend", "Expertises & Concept", "Toulouse", "Juin", "Août 2014", "Stage DUT Informatique")
+      :markdown-it
+        - Réalisation d’un site intranet pour la gestion des dossiers et la réalisation des expertises
+
+  .section
+    h2.section-title Formations
+
+    +item("Master Développement Logiciel", "Université Paul Sabatier", "Toulouse", "2017", null, "En alternance chez Munso")
+
+    +item("Licence Informatique", "Université Paul Sabatier", "Toulouse",  "2015")
+
+    +item("DUT Informatique", "IUT A", "Toulouse",  "2014")
+
+  .section.interests
+    h2.section-title Centres d'intérêt
+    .content
+      +interest("music", "Musique")
+      +interest("code", "Code")
+      +interest("molkky", "Mölkky")
+      +interest("movie", "Séries")
+
+#sidebar
+  #intro.side-block
+    h1.section-title Qui je suis
+    div.content
+      :markdown-it
+        Lorem ipsum dolor sit amet consectetur **adipisicing** elit. Similique asperiores et neque commodi ullam **tempore** ratione omnis reiciendis saepe? Ipsa repellat autem ipsam recusandae vero optio deserunt officia fugiat debitis.
+
+        Lorem ipsum dolor sit amet **consectetur adipisicing** elit.
+
+  .separator
+
+  #contact.side-block
+    h1.section-title Contact
+    div.contact-items
+      i.icon.icon-at
+      span.value valche.vc@gmail.com
+      i.icon.icon-map-marker
+      span.value 21 bd Matabiau #[span.small (appt 67)],
+        br
+        | 31 000 Toulouse
+      i.icon.icon-phone
+      span.value 07.77.03.37.86
+      i.icon.icon-github
+      span.value #[a(href="https://github.com/valentinchevalier") @valentinchevalier]
+
+  .separator
+
+  #skills.side-block
+    h1.section-title Compétences
+    div.content
+      :markdown-it
+        ## Langages et frameworks
+        - JavaScript (ES6) - HTML 5 - CSS 3
+        - Angular - Vue.js - React
+        - Ionic - Cordova
+        - NodeJS - Express
+        ## Outils de développement
+        - Webpack
+        - SASS - LESS
+        - TweenMax (GSAP)
+        - Versioning : GIT
+        ## Autres
+        - Photoshop - Illustrator - InDesign
+        - Anglais (bon niveau)
+          - Lecture/écriture aisée
+          - Bonne compréhension orale
+
+style
+  include:scss resume.scss

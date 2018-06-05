@@ -1,0 +1,25 @@
+mixin item(title, place, address, from_date, to_date, details)
+  .item
+    header
+      h3.item-title= title
+        span.date
+          if from_date
+            = from_date
+          if to_date
+            = " - " + to_date
+    div.item-location
+      if place
+        span.place= place
+      if address
+        span.address= address
+
+    if details
+      span.details= details
+    if block
+      .description
+        block
+
+mixin interest(icon, label)
+  .interest
+    i.icon(class="icon-"+icon)
+    p.label= label
