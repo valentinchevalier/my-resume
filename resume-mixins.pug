@@ -1,7 +1,7 @@
-mixin item(title, place, address, from_date, to_date, details)
-  .item
+mixin timeline-item(title, place, address, from_date, to_date, details)
+  .timeline-item
     header
-      h3.item-title= title
+      h3.medium-title= title
         span.date
           if from_date
             = from_date

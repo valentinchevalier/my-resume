@@ -9,7 +9,7 @@ The icons in the resume are inserted via an icons font. I use [icon-font-generat
 # Installation of dependency
 npm install -g icon-font-generator
 # Font icon generation
-icon-font-generator my-icons/*.svg -o dist
+icon-font-generator icons/*.svg -o dist
 ```
 
 ## PDF generation
