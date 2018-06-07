@@ -6,24 +6,22 @@ include resume-mixins.pug
 #main
 
   #intro.section
-    h1.section-title Qui je suis
     div.section-content
       :markdown-it
         Je me spécialise dans la mise en place d’expériences web qui combinent **interactivité**, ergonomie et qualité du code.
 
-        Ma passion pour le web et le **développement** me permet de découvrir et experimenter de nouvelles technologies et outils, mais également de suivre les tendances en matière de **design** ou d’ergonomie.
+        Ma passion pour le web et le **développement** me permet de découvrir et experimenter de nouvelles technologies et outils, mais également de suivre les tendances en matière de **design** et d’ergonomie.
 
   .section
     h2.section-title Expériences
 
-    +timeline-item("Développeur Frontend", "Munso", "Toulouse", "Sept. 2016", "Auj.")
+    +timeline-item("Développeur Frontend", "Munso", "Toulouse", "Sept. 2016", "Auj.", "Agence digitale basée à Toulouse et Paris d'une dizaine de personnes")
       :markdown-it
-        - Développement d’applications **Ionic/Angular** (Android et iOS)
+        - Conception technique et développement d’applications Android et iOS : **Ionic** / Meteor + API REST Node / Express / MongoDB
         - Développement de sites web Angular : [Share Stories Of Change](http://sharestoriesofchange.org/)
-        - Sites web **WordPress** : [Beezness](https://beezness.net/) - [CDA France](https://cdafrance.com/)
+        - Sites web **WordPress** : [Forbidden Stories](https://forbiddenstories.org/) - [CDA France](https://cdafrance.com/) - ...
         - Intégration front sur du Symfony (**Twig**) : [Lig'Up](https://lig-up.net/)
         - Amélioration de l'environnement de développement avec **WebPack**, NPM, Yarn, StyleLint, ESLint...
-        - Mise en place d’API REST Node / Express / MongoDB
 
     +timeline-item("Développeur Frontend", "Demooz", "Toulouse", "Mai", "Août 2016", "Stage M1 Informatique")
       :markdown-it
@@ -59,7 +57,7 @@ include resume-mixins.pug
       i.icon.icon-phone
       span.value 07.77.03.37.86
       i.icon.icon-github
-      span.value #[a(href="https://github.com/valentinchevalier") @valentinchevalier]
+      span.value #[a(href="https://github.com/valentinchevalier", target="_blank") @valentinchevalier]
 
   .separator
 
@@ -93,6 +91,9 @@ include resume-mixins.pug
       +interest("code", "Code")
       +interest("molkky", "Mölkky")
       +interest("movie", "Séries")
+
+#disclaimer CV réalisé en HTML/CSS -&nbsp;
+  a(href="https://git.io/vhukb", target="_blank") Code source
 
 style
   include:scss resume.scss

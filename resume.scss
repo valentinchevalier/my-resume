@@ -98,6 +98,7 @@ li {
 }
 
 body {
+  position: relative;
   width: $total-page-width;
   height: $total-page-height;
   padding: $page-padding;
@@ -341,5 +342,19 @@ body {
     font-size: $contact-icon-size;
     text-align: center;
     color: $highlight-color;
+  }
+}
+
+#disclaimer {
+  position: absolute;
+  bottom: $spacing-small;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 7pt;
+  color: $light-gray;
+
+  p {
+    margin: 0;
   }
 }
