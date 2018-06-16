@@ -7,8 +7,10 @@ Dynamically generate CVs using various templates.
 ## Templates
 
 ### Modern
+![alt text](Previews/cv-modern.png)
 
 ### Gradient
+![alt text](Previews/cv-gradient.png)
 
 ### Add yours ?
 
