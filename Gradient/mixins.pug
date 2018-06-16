@@ -1,0 +1,62 @@
+mixin title(name, job_title)
+    h1#title= name
+    #clip 
+        h1= job_title
+
+mixin experiences-item(from_date, to_date, title, place, city, description, ...details)
+    .timeline-item
+        .timeline-graphics
+            .line
+            .circle
+            .line-long
+        .timeline-content
+            .date 
+                if from_date
+                    = from_date
+                if to_date
+                    = " - " + to_date
+            .title= title
+            .place= place + " - " + city
+            if description
+                p.description= description
+            if details
+                ul.details
+                    each detail in details
+                        li!= detail
+
+mixin education-item(from_date, to_date, title, place, city, description, ...details)
+    .timeline-item
+        .timeline-graphics
+            .line
+            .circle
+            .line-long
+        .timeline-content
+            .date 
+                if from_date
+                    = from_date
+                if to_date
+                    = " - " + to_date
+            .title= title
+            .place= place + " - " + city
+            if description
+                p.description= description
+            if details
+                ul.details
+                    each detail in details
+                        li!= detail
+
+mixin contact-item(name, value)
+    .item
+        img.icon(src="../icons/" + name + ".svg")
+        span.value!= value
+        
+mixin hobbies-item(name, value)
+    .item
+        img.icon(src="../icons/" + name + ".svg")
+        span.value= value
+
+mixin skill-section(title, ...items)
+    .title= title
+    ul
+        each item in items
+            li= item
