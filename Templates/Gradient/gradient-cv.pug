@@ -1,0 +1,49 @@
+include mixins.pug
+
+#background
+    #header
+        include ../../content/title.pug
+
+    #content
+
+        .margin-left
+
+        #timelines
+            .title-wrapper
+                .angle
+                .separator
+                h2 Expériences
+
+            include ../../content/experiences.pug
+
+            .title-wrapper
+                .angle
+                .separator
+                h2 Formations
+
+            include ../../content/education.pug
+
+            .filler
+
+
+        #sidebar
+            .title-wrapper
+                h2 Contact
+                .separator
+            #contact-items
+                include ../../content/contact.pug
+            .title-wrapper 
+                h2 Compétences
+                .separator
+            #skills-items
+                include ../../content/skills.pug
+            .title-wrapper 
+                h2 Centres d'intérêt
+                .separator
+            #hobbies-items
+                include ../../content/hobbies.pug
+            //- .filler
+        .margin-right
+
+style
+    include:scss cv.scss

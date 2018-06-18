@@ -1,0 +1,67 @@
+mixin title(name, job_title)
+    h1.header-title= name
+    h2.header-subtitle= job_title
+
+mixin intro(...sections)
+    ul.sections
+      each section in sections
+        li!= section
+
+mixin experiences-item(from_date, to_date, title, place, city, description, ...details)
+    .timeline-item
+      header
+        h3.medium-title= title
+          span.date
+            if from_date
+              = from_date
+            if to_date
+              = " - " + to_date
+      div.item-location
+        if place
+          span.place= place
+        if city
+          span.address= city
+
+      if description
+        span.details= description
+      if details.length > 0
+        ul.description
+          each detail in details
+            li!= detail
+
+mixin education-item(from_date, to_date, title, place, city, description, ...details)
+    .timeline-item
+      header
+        h3.medium-title= title
+          span.date
+            if from_date
+              = from_date
+            if to_date
+              = " - " + to_date
+      div.item-location
+        if place
+          span.place= place
+        if address
+          span.address= city
+
+      if description
+        span.details= description
+      if details.length > 0
+        ul.description
+          each detail in details
+            li!= detail
+
+mixin contact-item(name, value)
+    i.icon(class="icon-"+name)
+    span.value!= value
+            
+mixin hobbies-item(name, value)
+    .interest
+      i.icon(class="icon-"+name)
+      p.label= value
+
+mixin skill-section(title, ...items)
+        h2.medium-title= title
+        ul
+            each item in items
+                li= item
