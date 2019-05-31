@@ -1,5 +1,5 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,800&display=swap');
 
 @import './dist/icons.css';
 
@@ -14,15 +14,14 @@ $main-col-width: 112mm;
 
 $light-weight: 300;
 $regular-weight: 400;
-$bold-weight: 700;
-$extra-bold-weight: 800;
+$medium-weight: 500;
+$bold-weight: 800;
 
 $gray: #484848;
 $light-gray: #C0C0C0;
 
-$blue: #46cdcf;
-$light-blue: #abedd8;
-$dark-blue: #48466d;
+$blue: #70f1ca;
+$dark-blue: darken($blue, 10%);
 
 $highlight-color: $blue;
 $link-color: $blue;
@@ -41,8 +40,6 @@ $stroke-size: 1px;
 $stroke-color: rgba($light-gray, 0.5);
 $stroke: $stroke-size solid $stroke-color;
 
-$letter-spacing-title: 0.5mm;
-
 $header-title-size: 25pt;
 $title-size: 13pt;
 $small-title-size: 10pt;
@@ -51,7 +48,6 @@ $small-size: 8pt;
 
 $contact-icon-size: 14pt;
 $interest-icon-size: 30pt;
-
 
 
 @page {
@@ -72,7 +68,7 @@ html {
 
 body {
   margin: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: $regular-weight;
   line-height: 1.3;
   color: $gray;
@@ -155,7 +151,7 @@ body {
 
   > ul {
     &:not(:last-child) {
-      margin-bottom: $spacing-small;
+      margin-bottom: $spacing;
     }
 
     > li {
@@ -179,34 +175,41 @@ body {
 
 // Titles
 .header-title {
+  color: $blue;
   font-weight: $light-weight;
   font-size: $header-title-size;
   line-height: 1;
   text-transform: uppercase;
-  letter-spacing: $letter-spacing-title;
+
+  strong {
+    font-weight: $bold-weight;
+  }
 }
 
 .header-subtitle {
   text-transform: uppercase;
   font-size: $title-size;
-  letter-spacing: $letter-spacing-title;
-  font-weight: $extra-bold-weight;
+  font-weight: $light-weight;
 }
 
 .section-title {
   text-transform: uppercase;
-  font-weight: $regular-weight;
+  font-weight: $bold-weight;
   font-size: $title-size;
   color: $gray;
   margin-bottom: $spacing-small;
-  letter-spacing: $letter-spacing-title;
 }
 
 .medium-title {
+  color: $blue;
   text-transform: uppercase;
-  letter-spacing: $letter-spacing-title;
   font-size: $small-title-size;
+  font-weight: $medium-weight;
   line-height: 1;
+
+  strong {
+    font-weight: $bold-weight;
+  }
 }
 
 // Timeline-item
@@ -255,6 +258,10 @@ body {
   .item-location {
     display: flex;
     font-size: $small-title-size;
+
+    .place {
+      font-style: italic;
+    }
 
     .place + .address {
       &::before {
@@ -342,6 +349,29 @@ body {
     font-size: $contact-icon-size;
     text-align: center;
     color: $highlight-color;
+  }
+}
+
+#skills {
+  .section-content > ul {
+    > li {
+      margin: 0 0 $spacing-xsmall 0;
+      padding-left: $spacing-small;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        height: 5px;
+        width: 5px;
+        border-radius: 50%;
+        background-color: $light-gray;
+        content: '';
+      }
+    }
+
   }
 }
 
