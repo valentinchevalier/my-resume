@@ -7,9 +7,9 @@ The icons in the resume are inserted via an icons font. I use [icon-font-generat
 
 ``` bash
 # Installation of dependency
-npm install -g icon-font-generator
+npm i
 # Font icon generation
-icon-font-generator icons/*.svg -o dist
+npm run generate-icon
 ```
 
 ## PDF generation
@@ -17,7 +17,9 @@ The resume is generated from `.pug` and `.scss` to `.pdf` with [RelaxedJS](https
 
 ``` bash
 # Installation of dependency
-npm i -g relaxedjs
+npm i
 # PDF generation
-relaxed resume.pug --build-once
+npm run build
+# Developpment (watch and html preview)
+npm run start
 ```

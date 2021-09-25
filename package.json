@@ -1,0 +1,23 @@
+{
+  "name": "my-resume",
+  "version": "2.0.0",
+  "description": "My resume, written in `.pug` and `.scss`",
+  "main": "index.js",
+  "dependencies": {
+    "relaxedjs": "^0.2.4"
+  },
+  "devDependencies": {
+    "icon-font-generator": "^2.1.11",
+    "puppeteer": "^10.4.0"
+  },
+  "scripts": {
+    "start": "relaxed resume.pug",
+    "build": "relaxed resume.pug --build-once",
+    "generate-icon": "icon-font-generator icons/*.svg -o dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valentinchevalier/my-resume.git"
+  },
+  "author": "Valentin Chevalier"
+}

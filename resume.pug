@@ -2,36 +2,40 @@ include resume-mixins.pug
 
 #header
   h1.header-title Valentin Chevalier
-  h2.header-subtitle Développeur Frontend
+  h2.header-subtitle Développeur Fullstack
+
+#intro.section
+  div.section-content
+    :markdown-it
+      Je me spécialise dans la mise en place d’expériences web qui combinent **interactivité**, ergonomie et qualité du code.
+
+      Ma passion pour le web et le **développement** me permet de découvrir et experimenter de nouvelles technologies et outils, mais également de suivre les tendances en matière de **design**, d’ergonomie et d'animations.
+
 #main
-
-  #intro.section
-    div.section-content
-      :markdown-it
-        Je me spécialise dans la mise en place d’expériences web qui combinent **interactivité**, ergonomie et qualité du code.
-
-        Ma passion pour le web et le **développement** me permet de découvrir et experimenter de nouvelles technologies et outils, mais également de suivre les tendances en matière de **design** et d’ergonomie.
-
   .section
     h2.section-title Expériences
 
-    +timeline-item("Développeur Frontend", "Munso", "Toulouse", "Sept. 2016", "Auj.", "Agence digitale basée à Toulouse et Paris d'une dizaine de personnes")
+    +timeline-item("Développeur FullStack", "W2P Digital", "Agence web basée à Toulouse", "Août 2018", "Auj.")
       :markdown-it
-        - Conception technique et développement d’applications Android et iOS : **Ionic** / Meteor + API REST Node / Express / MongoDB
-        - Développement de sites web Angular : [Share Stories Of Change](http://sharestoriesofchange.org/)
-        - Sites web **WordPress** : [Forbidden Stories](https://forbiddenstories.org/) - [CDA France](https://cdafrance.com/) - ...
-        - Intégration front sur du Symfony (**Twig**) : [Lig'Up](https://lig-up.net/)
-        - Amélioration de l'environnement de développement avec **WebPack**, NPM, Yarn, StyleLint, ESLint...
+        - Sites web **WordPress** : [France Paralympique](https://france-paralympique.fr/) - [Pyrofree](https://www.pyrofree.com/) - [TEDx Toulouse](https://www.tedxtoulouse.com/) - ...
+        - Sites événementiels : [PortonsLeDrapeau.fr](https://www.portonsledrapeau.fr/) - [Reveal maillot Stade Toulousain](https://alaconquetedesetoiles.space)
+        - Conception et développement d’applications Android et iOS : **VueJS** + **Capacitor** [Application pour Danone](https://play.google.com/store/apps/details?id=com.hydrationforhealth.splash)
+        - Amélioration de l'environnement de développement **WebPack**, NPM, StyleLint, ESLint...
+
+    +timeline-item("Développeur Frontend", "Munso", "Agence web basée à Toulouse", "Sept. 2016", "Août 2018", "(fermée depuis)")
+      :markdown-it
+        - Applications Android et iOS : **Ionic** + API REST Node / Express / MongoDB
+        - Sites web **WordPress**, Angular
+        - Intégration front sur du Symfony (**Twig**)
 
     +timeline-item("Développeur Frontend", "Demooz", "Toulouse", "Mai", "Août 2016", "Stage M1 Informatique")
       :markdown-it
-        - Développement de la version 2 du site [demooz.com](https://demooz.com/fr/)
-        - Frontend et backend AngularJS + API NodeJS
+        - Développement du site [demooz.com](https://demooz.com/fr/)
+        - Frontend et backend Angular + API NodeJS
 
     +timeline-item("Développeur Fullstack", "Expertises & Concept", "Toulouse", "Juin", "Août 2014", "Stage DUT Informatique")
       :markdown-it
-        - Réalisation d’un site intranet pour la gestion des dossiers et la réalisation des expertises
-        - Utilisation du framework Phalcon PHP
+        - Réalisation d’un intranet pour la réalisation des expertises
 
   .section
     h2.section-title Formations
@@ -46,12 +50,16 @@ include resume-mixins.pug
 #sidebar
 
   #contact.section
-    h1.section-title Contact
+    h1.section-title Infos
     .contact-items
-      i.icon.icon-at
+      i.icon.icon-birthday-cake
+      span.value 29 ans
+      i.icon.icon-mail
       span.value valche.vc@gmail.com
       i.icon.icon-map-marker
-      span.value 21 bd Matabiau #[span.small (appt 67)],
+      span.value 6 rue des Gallois
+        br
+        | #[span.small Bât 1, Appt 111]
         br
         | 31 000 Toulouse
       i.icon.icon-phone
@@ -67,30 +75,37 @@ include resume-mixins.pug
       h2.medium-title Langages et frameworks
       :markdown-it
         - JavaScript (ES6) - HTML 5 - CSS 3
-        - Angular - Vue.js - React
-        - Ionic - Cordova
-        - NodeJS - Express
+        - PHP - NodeJS
+        - VueJS - React - Angular
+        - Capacitor - Electron
+        - GSAP
+      h2.medium-title CMS
+      :markdown-it
+        - WordPress - WooCommerce
+        - Prestashop - Drupal
       h2.medium-title Outils de développement
       :markdown-it
-        - Webpack
-        - SASS - LESS
-        - TweenMax (GSAP)
+        - Webpack - NPM
+        - SASS
+        - Twig
         - Versioning : GIT
       h2.medium-title Autres
       :markdown-it
-        - Photoshop - Illustrator - InDesign
+        - Figma - Sketch
+        - Illustrator - Photoshop
         - Anglais (bon niveau)
           - Lecture/écriture aisée
           - Bonne compréhension orale
-  .separator
 
-  #interests.section
-    h2.section-title Centres d'intérêt
-    .interests-items
-      +interest("headphones", "Musique")
-      +interest("code", "Code")
-      +interest("molkky", "Mölkky")
-      +interest("movie", "Séries")
+  //- .separator
+
+  //- #interests.section
+  //-   h2.section-title Centres d'intérêt
+  //-   .interests-items
+  //-     +interest("headphones", "Musique")
+  //-     +interest("code", "Code")
+  //-     +interest("molkky", "Mölkky")
+  //-     +interest("movie", "Séries")
 
 #disclaimer CV réalisé en HTML/CSS -&nbsp;
   a(href="https://git.io/vhukb", target="_blank") Code source
