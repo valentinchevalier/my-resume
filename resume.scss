@@ -4,7 +4,7 @@
 @import './dist/icons.css';
 
 
-$page-padding: 15mm;
+$page-padding: 10mm 15mm;
 
 $total-page-width: 210mm;
 $total-page-height: 297mm;
@@ -20,13 +20,13 @@ $bold-weight: 800;
 $gray: #484848;
 $light-gray: #C0C0C0;
 
-$blue: #70f1ca;
-$dark-blue: darken($blue, 10%);
+$primary-color: #00bcd4;
+$dark-primary-color: darken($primary-color, 10%);
 
-$highlight-color: $blue;
-$link-color: $blue;
+$highlight-color: $primary-color;
+$link-color: $primary-color;
 
-$header-height: 25mm;
+$header-height: 22mm;
 
 $spacing: 8mm;
 $spacing-small: $spacing / 2;
@@ -37,7 +37,7 @@ $spacing-medium: $spacing * 2;
 
 $timeline-dot-size: 4mm;
 $stroke-size: 1px;
-$stroke-color: rgba($light-gray, 0.5);
+$stroke-color: rgba($light-gray, 0.2);
 $stroke: $stroke-size solid $stroke-color;
 
 $header-title-size: 25pt;
@@ -175,7 +175,7 @@ body {
 
 // Titles
 .header-title {
-  color: $blue;
+  color: $primary-color;
   font-weight: $light-weight;
   font-size: $header-title-size;
   line-height: 1;
@@ -183,6 +183,10 @@ body {
 
   strong {
     font-weight: $bold-weight;
+  }
+
+  small {
+
   }
 }
 
@@ -201,7 +205,7 @@ body {
 }
 
 .medium-title {
-  color: $blue;
+  color: $primary-color;
   text-transform: uppercase;
   font-size: $small-title-size;
   font-weight: $medium-weight;
@@ -260,13 +264,21 @@ body {
     font-size: $small-title-size;
 
     .place {
-      font-style: italic;
+
+      &.highlight {
+        color: $primary-color;
+        font-weight: $medium-weight;
+      }
     }
 
     .place + .address {
       &::before {
         content: ', ';
       }
+    }
+
+    .address {
+      font-style: italic;
     }
   }
 
@@ -303,6 +315,14 @@ body {
   }
 }
 
+#intro {
+  .section-content {
+    > * {
+      line-height: 1.8;
+    }
+  }
+}
+
 #interests {
   .interests-items {
     display: grid;
@@ -325,6 +345,7 @@ body {
       .label {
         font-size: $normal-size;
         margin: $spacing-small 0 0;
+        text-align: center;
       }
     }
   }

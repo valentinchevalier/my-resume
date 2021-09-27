@@ -1,47 +1,42 @@
 include resume-mixins.pug
 
 #header
-  h1.header-title #[strong Camille] DARRACQ
-  h2.header-subtitle Employée Polyvalente
+  h1.header-title #[strong Camille] DARRACQ #[small.small Née le 7 Mai 1989]
+  h2.header-subtitle Employée polyvalente
 #main
 
-  #intro.section
-    div.section-content
-      :markdown-it
-        Je me spécialise dans la mise en place d’expériences web qui combinent **interactivité**, ergonomie et qualité du code.
+  //- #intro.section
+  //-   div.section-content
+  //-     :markdown-it
+  //-       Je recherche un poste d'employée polyvalente en *temps partiel* afin de compléter mon activité d'illustratrice à mon compte.
 
   .section
     h2.section-title Expériences
 
-    //- +timeline-item("Développeur Frontend", "Munso", "Toulouse", "Sept. 2016", "Auj.", "Agence digitale basée à Toulouse et Paris d'une dizaine de personnes")
-    //-   :markdown-it
-    //-     - Conception technique et développement d’applications Android et iOS : **Ionic** / Meteor + API REST Node / Express / MongoDB
     //-     - Développement de sites web Angular : [Share Stories Of Change](http://sharestoriesofchange.org/)
     //-     - Sites web **WordPress** : [Forbidden Stories](https://forbiddenstories.org/) - [CDA France](https://cdafrance.com/) - ...
-    //-     - Intégration front sur du Symfony (**Twig**) : [Lig'Up](https://lig-up.net/)
-    //-     - Amélioration de l'environnement de développement avec **WebPack**, NPM, Yarn, StyleLint, ESLint...
+    +timeline-item("Vendeuse", "Meric boutique", "Toulouse", "2020 - 3 mois", null, null, true)
+      :markdown-it
+        - Accueil et conseil client
 
-    //- +timeline-item("Développeur Frontend", "Demooz", "Toulouse", "Mai", "Août 2016", "Stage M1 Informatique")
-    //-   :markdown-it
-    //-     - Développement de la version 2 du site [demooz.com](https://demooz.com/fr/)
-    //-     - Frontend et backend AngularJS + API NodeJS
+    +timeline-item("Vendeuse", "Bensimon - Home Autour du monde", "Toulouse", "2019 - 4 mois", null, null, true)
+      :markdown-it
+        - Accueil et conseil client
+        - Gestion de caisse
+        - Réception des colis, étiquetage et cintrage
 
     +timeline-item("Graphiste Illustratrice Freelance", "Auto-entrepreneur", "Toulouse", "Depuis 2016")
       :markdown-it
-        - Relation et gestion clientèle
-        - Gestion administrative de l'entreprise
+        - Création d'identités visuelles, supports de communication
+        - Illustrations autour du design et de l'architecture
 
-    +timeline-item("Service, employée polyvalente", "La Kantoch", "Toulouse", "2018 - 8 mois")
-      :markdown-it
-        - Mise en place - Service en salle
-        - Encaissement
-        - Commis - Plonge
+    +timeline-item("Serveuse, employée polyvalente", "La Kantoch", "Toulouse", "2018 - 1 an")
 
-    +timeline-item("Hôtesse de caisse", "Casino Supermarché - Espace Saint-George", "Toulouse", "2011 - 3 mois", "2014 - 5 mois")
+    +timeline-item("Hôtesse de caisse", "Casino Supermarché - Espace Saint-Georges", "Toulouse", "2011 - 3 mois", "2014 - 5 mois")
 
     +timeline-item("Employée polyvalente", "Carrefour Market", "Argelès-Gazost", "2011 - 3 mois", "2012 - 3 mois")
 
-    +timeline-item("Service, employée polyvalente", "Café Napoléon III", "Bordeaux", "2010 - 3 mois")
+    +timeline-item("Serveuse, employée polyvalente", "Café Napoléon III", "Bordeaux", "2010 - 3 mois")
 
     +timeline-item("Réception hôtelière", "La Louisiane", "Paris 6", "2009", "3 mois")
 
@@ -54,7 +49,7 @@ include resume-mixins.pug
 
     +timeline-item("Diplôme national d'art - Option Design", "ISDAT", "Toulouse", "2011 - 2013")
 
-    +timeline-item("Mise à niveau en Art Appliqué", "Ecole de condé", "Bordeaux", "2009 - 2010")
+    +timeline-item("Mise à niveau en Art Appliqué", "Ecole de Condé", "Bordeaux", "2009 - 2010")
 
     +timeline-item("Bac L - Histoire de l'art", "", "Bordeaux", "2008")
 
@@ -68,7 +63,7 @@ include resume-mixins.pug
       i.icon.icon-home
       span.value 6 rue des Gallois,
         br
-        | Bât 1 Appt 111,
+        | Bât 1, Appt 111,
         br
         | 31 400 Toulouse
       i.icon.icon-phone
@@ -81,28 +76,33 @@ include resume-mixins.pug
   #skills.section
     h1.section-title Compétences
     .section-content
+      :markdown-it
+        - Service en salle
+        - Gestion de caisse
+        - Mise en rayon
+        - Gestion de stocks - Inventaire
+        - Réception de livraisons
       h2.medium-title Relationnel
       :markdown-it
         - Accueil et conseil du client
-        - Reception de livraisons
         - Travail en équipe
       h2.medium-title Infographie
       :markdown-it
         - Photoshop, Illustrator, InDesign
       h2.medium-title Autres
       :markdown-it
-        - Anglais (bon niveau)
-          - Lecture/écriture aisée
+        - Anglais
+          - Lecture aisée
           - Bonne compréhension orale
 
   .separator
 
   #interests.section
-    h2.section-title Passion
+    h2.section-title Passions
     .interests-items
-      +interest("headphones", "Art & design")
-      +interest("code", "Tropicool")
-      +interest("molkky", "Mölkky")
+      +interest("building", "Architecture & Design")
+      +interest("bike", "Vélo")
+      +interest("book", "Littérature")
       +interest("movie", "Séries")
 
 //- #disclaimer CV réalisé en HTML/CSS -&nbsp;

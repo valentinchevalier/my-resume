@@ -1,4 +1,4 @@
-mixin timeline-item(title, place, address, from_date, to_date, details)
+mixin timeline-item(title, place, address, from_date, to_date, details, highlight)
   .timeline-item
     header
       h3.medium-title= title
@@ -8,8 +8,10 @@ mixin timeline-item(title, place, address, from_date, to_date, details)
           if to_date
             = " - " + to_date
     div.item-location
-      if place
+      if place && !highlight
         span.place= place
+      if place && highlight
+        span.place.highlight= place
       if address
         span.address= address
 
